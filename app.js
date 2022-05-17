@@ -118,10 +118,7 @@ function changerDirection(event) {
     const adroite = vx === 10;
     const agauche = vx === -10;
 
-    // Imaginons que l'on veuille aller à gauche (premier cas)
-    // on appuie sur la touche gauche, donc direction === FLECHE_GAUCHE === true
-    // puis on verifie que l'on est pas entrain d'aller à droite, pour eviter que le serpent se retourne sur lui-même
-    // donc si on va à droite, "adroite === true", donc on écrit !adroite (inverse de adroite, donc false) pour empecher la condition && de s'executer.
+
     if (direction === FLECHE_GAUCHE && !adroite) {
         vx = -10;
         vy = 0;
